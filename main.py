@@ -13,28 +13,10 @@ for path in os.listdir(dir_path):
     if os.path.isfile(os.path.join(dir_path, path)):
         res.append(path)
 #print(res)
-
-
-def UserGiris():
-    print("Klasor'u bosaltiyorum? Enter Yes or No")
-    answer='wrong'
-    while answer not in ['YES','NO','Y','N']:
-        answer=input("Answer? (Yes or No):")
-        answer=answer.upper()
-        if answer not in ['YES','NO','Y','N']:
-            print("Sorry, invalid answer!")
-    
-    if answer in ['YES','Y']:
-        return True
-    elif answer in ['NO','N']:
-        return False
-
-answer=UserGiris()
-if answer is True:
-    count=0
-    # LIST ITEM IN RES LIST AND CHECKS IF ITS IN ESSENTIALS IF NOT REMOVES ITEM
-    for iter in res:
-        if iter not in essentials:
-            os.remove(dir_path+'\\'+iter)
-            count+=1
-    print("{} amount of files removed".format(count))
+count=0
+# LIST ITEM IN RES LIST AND CHECKS IF ITS IN ESSENTIALS IF NOT REMOVES ITEM
+for iter in res:
+    if iter not in essentials:
+        os.remove(dir_path+'\\'+iter)
+        count+=1
+print("{} amount of files removed".format(count))
