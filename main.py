@@ -14,7 +14,10 @@ for path in os.listdir(dir_path):
         res.append(path)
 #print(res)
 
+count=0
 # LIST ITEM IN RES LIST AND CHECKS IF ITS IN ESSENTIALS IF NOT REMOVES ITEM
 for iter in res:
     if iter not in essentials:
         os.remove(dir_path+'\\'+iter)
+        count+=1
+print("{} amount of files removed".format(count))
