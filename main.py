@@ -20,3 +20,4 @@ for iter in res:
         os.remove(dir_path+'\\'+iter)
         count+=1
 print("{} amount of files removed".format(count))
+waitinp=input("Press a key...")
