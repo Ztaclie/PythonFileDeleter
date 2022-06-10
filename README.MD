@@ -1,0 +1,1 @@
+I basically need to delete images from spesific folder with filter feature on it.So i created this simple python app with this app you can simply delete files in that folder except the ones you choose and its also counts how many files it deleted.
